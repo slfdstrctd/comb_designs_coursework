@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-data = pd.read_csv("blocks", header=None)
+data = pd.read_csv("blocks51.txt", header=None)
 
 aa = []
 k = 0
@@ -30,9 +30,10 @@ for i in bb.T:
 my_set = set()
 for l in ll:
     my_set.add(l)
-
+k = 1
 for i in my_set:
-    print('Vector', i, 'repeats', ll.count(i), 'times')
+    print(k, 'Vector', i, 'repeats', ll.count(i), 'times')
+    k += 1
 
 pairs = set()
 temp = []
@@ -45,6 +46,7 @@ for i in aa:
         temp.append(t2)
         pairs.add(t1)
         pairs.add(t2)
-
+k = 1
 for i in pairs:
-    print('Pair', i, 'repeats', temp.count(i), 'times')
+    print(k, 'Pair', i, 'repeats', temp.count(i), 'times')
+    k += 1
